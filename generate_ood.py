@@ -5,7 +5,7 @@ from argparse import ArgumentParser
 import torch
 from torchvision.datasets import STL10, CIFAR10, CIFAR100
 
-from models import ImageEditing, SuperResolution
+from models.shift import ImageEditing, SuperResolution
 
 
 def save_file(save_dir, subdir, file_name, data):
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     parser.add_argument('--num_images_per_prompt', type=int, default=1)
     
     parser.add_argument('--data_dir', type=str, default='./datasets')
-    parser.add_argument('--save_dir', type=str, default='./logs')
+    parser.add_argument('--save_dir', type=str, default='./datasets')
     
     parser.add_argument('--save_raw', action='store_true')
     parser.add_argument('--save_sr', action='store_true')
