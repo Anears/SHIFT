@@ -1,7 +1,7 @@
 from torch import nn
 
 
-class OODDector(nn.Module):
+class OODDetector(nn.Module):
     def __init__(self, arc='wrn', img_size=32):
         super().__init__()
         
